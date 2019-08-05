@@ -108,3 +108,14 @@ navDad.prepend(newNavTwo);
 
 let navText = document.querySelectorAll('nav a'); // moved to bottom so it can access new nav options
 navText.forEach(element => element.style.color = 'green');
+
+headers.forEach(el => el.style.color = 'green');
+contactHead.style.color = 'green';
+
+headers.forEach(el => el.addEventListener('click', (event) => {
+  el.style.color = 'black';
+}))
+
+paragraphs.forEach(el => el.addEventListener('click', (event) => {
+  el.textContent = 'No button but behold, new text!';
+}))
