@@ -90,6 +90,7 @@ console.log(contactPara);
 contactPara[0].textContent = siteContent.contact.address; 
 contactPara[1].textContent = siteContent.contact.phone;
 contactPara[2].textContent = siteContent.contact.email;
+contactPara[0].style.width = '20%';
 
 let footer = document.querySelector('footer p');
 console.log(footer);
