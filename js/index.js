@@ -50,7 +50,11 @@ links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-5"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
-let ctaText = document.querySelector('.cta-text');
+let ctaButton = document.querySelector('.cta .cta-text button');
+console.log(ctaButton);
+ctaButton.textContent = siteContent.cta.button;
+
+let ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent.cta.h1;
 
 let ctaPic = document.querySelector('#cta-img');
