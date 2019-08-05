@@ -94,3 +94,17 @@ contactPara[2].textContent = siteContent.contact.email;
 let footer = document.querySelector('footer p');
 console.log(footer);
 footer.textContent = siteContent.footer.copyright;
+
+let newNavOne = document.createElement('a');
+newNavOne.textContent = 'Reviews';
+console.log(newNavOne);
+
+let newNavTwo = document.createElement('a');
+newNavTwo.textContent = 'Home';
+
+let navDad = document.querySelector('nav');
+navDad.appendChild(newNavOne);
+navDad.prepend(newNavTwo);
+
+let navText = document.querySelectorAll('nav a'); // moved to bottom so it can access new nav options
+navText.forEach(element => element.style.color = 'green');
