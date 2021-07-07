@@ -40,3 +40,83 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let links = document.querySelectorAll('a');
+console.log(links);
+links[0].textContent = siteContent.nav["nav-item-1"];
+links[1].textContent = siteContent.nav["nav-item-2"];
+links[2].textContent = siteContent.nav["nav-item-3"];
+links[3].textContent = siteContent.nav["nav-item-4"];
+links[4].textContent = siteContent.nav["nav-item-5"];
+links[5].textContent = siteContent.nav["nav-item-6"];
+
+let ctaButton = document.querySelector('.cta .cta-text button');
+console.log(ctaButton);
+ctaButton.textContent = siteContent.cta.button;
+
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = siteContent.cta.h1;
+
+let ctaPic = document.querySelector('#cta-img');
+ctaPic.setAttribute('src', siteContent['cta']['img-src']);
+
+let headers = document.querySelectorAll('.text-content h4');
+console.log(headers);
+
+let paragraphs = document.querySelectorAll('.text-content p');
+console.log(paragraphs);
+
+headers[0].textContent = siteContent["main-content"]["features-h4"];
+headers[1].textContent = siteContent["main-content"]["about-h4"];
+headers[2].textContent = siteContent["main-content"]["services-h4"];
+headers[3].textContent = siteContent["main-content"]["product-h4"];
+headers[4].textContent = siteContent["main-content"]["vision-h4"];
+
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
+
+let middlePic = document.querySelector('.middle-img');
+middlePic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactHead = document.querySelector('.contact h4');
+console.log(contactHead);
+contactHead.textContent = siteContent.contact["contact-h4"];
+
+let contactPara = document.querySelectorAll('.contact p');
+console.log(contactPara);
+contactPara[0].textContent = siteContent.contact.address; 
+contactPara[1].textContent = siteContent.contact.phone;
+contactPara[2].textContent = siteContent.contact.email;
+contactPara[0].style.width = '20%';
+
+let footer = document.querySelector('footer p');
+console.log(footer);
+footer.textContent = siteContent.footer.copyright;
+
+let newNavOne = document.createElement('a');
+newNavOne.textContent = 'Reviews';
+console.log(newNavOne);
+
+let newNavTwo = document.createElement('a');
+newNavTwo.textContent = 'Home';
+
+let navDad = document.querySelector('nav');
+navDad.appendChild(newNavOne);
+navDad.prepend(newNavTwo);
+
+let navText = document.querySelectorAll('nav a'); // moved to bottom so it can access new nav options
+navText.forEach(element => element.style.color = 'green');
+
+headers.forEach(el => el.style.color = 'green');
+contactHead.style.color = 'green';
+
+headers.forEach(el => el.addEventListener('click', (event) => {
+  el.style.color = 'black';
+}))
+
+paragraphs.forEach(el => el.addEventListener('click', (event) => {
+  el.textContent = 'No button but behold, new text!';
+}))
